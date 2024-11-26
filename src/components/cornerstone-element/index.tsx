@@ -11,30 +11,6 @@ cornerstoneTools.external.cornerstoneMath = cornerstoneMath;
 cornerstoneWebImageLoader.external.cornerstone = cornerstone;
 cornerstoneTools.external.Hammer = Hammer;
 
-// 定义div样式的类型
-type DivStyleType = {
-  width: string;
-  height: string;
-  position: string;
-  color: string;
-};
-
-// 定义底部左边样式的类型
-type BottomLeftStyleType = {
-  bottom: string;
-  left: string;
-  position: string;
-  color: string;
-};
-
-// 定义底部右边样式的类型
-type BottomRightStyleType = {
-  bottom: string;
-  right: string;
-  position: string;
-  color: string;
-};
-
 // 假设stack有特定的结构，这里简单定义一下包含imageIds属性的类型，可根据实际情况细化
 type StackType = {
   imageIds: string[];
@@ -144,21 +120,21 @@ export const CornerstoneElement = (props: CornerstoneElementProps) => {
     }
   };
 
-  const divStyle: DivStyleType = {
+  const divStyle: React.CSSProperties = {
     width: "512px",
     height: "512px",
     position: "relative",
     color: "white",
   };
 
-  const bottomLeftStyle: BottomLeftStyleType = {
+  const bottomLeftStyle:React.CSSProperties = {
     bottom: "5px",
     left: "5px",
     position: "absolute",
     color: "white",
   };
 
-  const bottomRightStyle: BottomRightStyleType = {
+  const bottomRightStyle: React.CSSProperties = {
     bottom: "5px",
     right: "5px",
     position: "absolute",
